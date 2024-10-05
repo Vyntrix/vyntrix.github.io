@@ -1,3 +1,4 @@
+import { dev } from '$app/environment';
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
@@ -16,7 +17,7 @@ const config = {
 			pages: 'build',
 		}),
 		paths: {
-			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH,
+			base: dev ? '' : process.env.BASE_PATH
 		}
 	}
 };
