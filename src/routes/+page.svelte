@@ -1,9 +1,5 @@
-<script lang="ts">
-	let count = $state(0)
+<script>
+	import ThemeSwitch from "$lib/components/themeswitch.svelte"
 </script>
 
-<h1>Welcome to SvelteKit</h1>
-<p>Counter example:</p>
-<button onclick={() => count++}>
-	clicks: {count}
-</button>
+<ThemeSwitch />
